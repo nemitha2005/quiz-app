@@ -36,22 +36,24 @@ const Quiz = () => {
 
     // Effect to handle timer
     useEffect(() => {
-        if (timerRef.current) clearInterval(timerRef.current); // Clear existing timer if any
+        if (quizStarted) {
+            if (timerRef.current) clearInterval(timerRef.current); // Clear existing timer if any
 
-        // Set up new timer
-        timerRef.current = setInterval(() => {
-            setTimeLeft(prev => {
-                if (prev === 1) {
-                    clearInterval(timerRef.current); // Clear timer when it reaches 1 second
-                    next(true); // Auto move to next question
-                }
-                return prev - 1;
-            });
-        }, 1000);
+            // Set up new timer
+            timerRef.current = setInterval(() => {
+                setTimeLeft(prev => {
+                    if (prev === 1) {
+                        clearInterval(timerRef.current); // Clear timer when it reaches 1 second
+                        next(true); // Auto move to next question
+                    }
+                    return prev - 1;
+                });
+            }, 1000);
 
-        // Cleanup timer on component unmount or index change
-        return () => clearInterval(timerRef.current);
-    }, [index]);
+            // Cleanup timer on component unmount or index change
+            return () => clearInterval(timerRef.current);
+        }
+    }, [index, quizStarted]);
 
     // Function to check the answer
     const checkAnswer = (e, ans) => {
