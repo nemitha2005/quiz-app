@@ -1,153 +1,141 @@
-/* quiz.css */
-
-/* Reset and global styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: #f4f4f4;
-    color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 20px;
+  background-color: #f4f4f4;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
 }
 
-/* Container styles */
 .common-container {
-    background: transparent;
-    border: 1px solid #ddd;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(111, 3, 98, 10);
-    max-width: 600px;
-    width: 100%;
-    text-align: center;
-    color: #fff;
+  background: #272727;
+  border: 1px solid #6b21a8;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px #6b21a8;
+  width: 100%;
+  text-align: center;
+  color: #fff;
 }
 
 .heading {
-    font-size: 2em;
-    color: #fff;
-    margin-bottom: 10px;
+  font-size: 2em;
+  color: #a355e4;
+  margin-bottom: 10px;
 }
 
 hr {
-    border: none;
-    height: 1px;
-    background: #ddd;
-    margin: 10px 0;
+  border: none;
+  height: 1px;
+  background: #ddd;
+  margin: 10px 0;
 }
 
-/* Question styles */
 .question {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-    color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #fff;
 }
 
-/* Answer styles */
 .answers {
-    list-style: none;
-    padding: 0;
-    text-align: left;
-    color: #fff;
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  color: #fff;
 }
 
 .answers li {
-    background: transparent;
-    border: 1px solid #ddd;
-    padding: 10px;
-    border-radius: 5px;
-    margin: 10px 0;
-    cursor: pointer;
-    transition: background 0.3s;
+  background: transparent;
+  border: 1px solid #6b21a8;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: background 0.3s;
 }
 
 .answers li:hover {
-    background: #ddd;
+  box-shadow: 0 4px 8px #6b21a8;
 }
 
 .answers li.correct {
-    background: #4caf50;
-    color: white;
+  background: rgba(3, 245, 11, 0.2);
+  color: white;
 }
 
 .answers li.wrong {
-    background: #f44336;
+  background: rgba(244, 67, 54, 0.2);
+  color: white;
 }
 
-/* Progress bar */
 .progress-bar {
-    height: 10px;
-    width: 100%;
-    background: #ddd;
-    border-radius: 5px;
-    overflow: hidden;
-    margin-bottom: 20px;
+  height: 10px;
+  width: 100%;
+  background: #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 20px;
 }
 
 .progress {
-    height: 100%;
-    background: #4caf50;
-    transition: width 0.5s;
+  height: 100%;
+  background: linear-gradient(to right, #6b21a8, #a858e9);
+  transition: width 0.5s;
 }
 
-/* Timer styles */
 .timer {
-    font-size: 1.1em;
-    margin: 10px 0;
-    color: #fff;
+  font-size: 1.1em;
+  margin: 10px 0;
+  color: #fff;
 }
 
-/* Button styles */
 .nav-button {
-    background: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
+  background: #6b21a8;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
 }
 
 .nav-button:hover {
-    background: #0056b3;
+  background: #a858e9;
 }
 
-/* Error and timeout messages */
-.error, .timeout {
-    color: #f44336;
-    font-size: 0.9em;
-    margin: 10px 0;
+.error {
+  color: #f44336;
+  font-size: 0.9em;
+  margin: 10px 0;
 }
 
-/* Count styles */
 .count {
-    font-size: 1em;
-    margin: 10px 0;
-    color: #fff;
+  font-size: 1em;
+  margin: 10px 0;
+  color: #fff;
 }
 
-/* Responsive design */
 @media (max-width: 600px) {
-    .common-container {
-        padding: 10px;
-    }
+  .common-container {
+    padding: 10px;
+  }
 
-    .heading {
-        font-size: 1.5em;
-    }
+  .heading {
+    font-size: 1.5em;
+  }
 
-    .question {
-        font-size: 1em;
-    }
+  .question {
+    font-size: 1em;
+  }
 
-    .nav-button {
-        padding: 8px 16px;
-    }
+  .nav-button {
+    padding: 8px 16px;
+  }
 }
